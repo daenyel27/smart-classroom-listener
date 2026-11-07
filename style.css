@@ -1,0 +1,681 @@
+:root {
+    --background: #f5f7fb;
+    --surface: #ffffff;
+
+    --primary: #4f6df5;
+    --primary-dark: #3d59df;
+    --primary-light: #edf0ff;
+
+    --text: #20283b;
+    --secondary: #7d879b;
+    --border: #e9edf4;
+
+    --green: #16a879;
+    --green-light: #e8f8f1;
+
+    --blue: #4f6df5;
+    --orange: #f0a23b;
+    --purple: #9474e9;
+
+    --radius: 18px;
+}
+
+
+/* =====================================
+   GLOBAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "DM Sans", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    padding: 35px 24px;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =====================================
+   MAIN CONTAINER
+===================================== */
+
+.app-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+.brand h1 {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.brand p {
+    color: var(--secondary);
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.system-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 9px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.online-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+}
+
+
+/* =====================================
+   PAGE INTRO
+===================================== */
+
+.page-intro {
+    margin: 38px 0 25px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+}
+
+.page-intro h2 {
+    font-size: 30px;
+    letter-spacing: -1.2px;
+    margin-top: 6px;
+    font-weight: 800;
+}
+
+.page-intro p {
+    color: var(--secondary);
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+
+/* =====================================
+   MAIN GRID
+===================================== */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 22px;
+    align-items: stretch;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 26px;
+    box-shadow: 0 5px 20px rgba(31, 45, 75, 0.035);
+}
+
+
+/* =====================================
+   CARD HEADINGS
+===================================== */
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-label {
+    color: var(--secondary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.card-heading h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+
+/* =====================================
+   STATUS
+===================================== */
+
+.status-pill {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 11px;
+    background: #f5f6f9;
+    border-radius: 30px;
+    color: var(--secondary);
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-indicator {
+    width: 7px;
+    height: 7px;
+    background: #aab1bf;
+    border-radius: 50%;
+}
+
+.status-indicator.active {
+    background: var(--green);
+    box-shadow: 0 0 0 4px rgba(22, 168, 121, 0.12);
+    animation: pulse 1.5s infinite;
+}
+
+
+/* =====================================
+   MICROPHONE AREA
+===================================== */
+
+.mic-area {
+    text-align: center;
+    padding: 43px 10px 32px;
+}
+
+.mic-circle {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.mic-circle svg {
+    width: 43px;
+    height: 43px;
+}
+
+.mic-area h3 {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+}
+
+.mic-area p {
+    max-width: 270px;
+    margin: 8px auto 0;
+    color: var(--secondary);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   LISTENING ANIMATION
+===================================== */
+
+.status-indicator.active ~ * {
+    color: var(--green);
+}
+
+.card:has(.status-indicator.active) .mic-circle {
+    background: var(--green-light);
+    color: var(--green);
+    animation: micPulse 2s infinite;
+}
+
+@keyframes micPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(22, 168, 121, 0.18);
+    }
+
+    70% {
+        box-shadow: 0 0 0 17px rgba(22, 168, 121, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(22, 168, 121, 0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}
+
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 46px;
+    padding: 0 17px;
+    border-radius: 11px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+.btn-primary {
+    flex: 1;
+    color: white;
+    background: var(--primary);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(79, 109, 245, 0.2);
+}
+
+.btn-secondary {
+    background: #f1f3f7;
+    color: var(--text);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #e7eaf0;
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+/* =====================================
+   PRIVACY NOTE
+===================================== */
+
+.privacy-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 22px;
+    color: var(--secondary);
+    font-size: 10px;
+}
+
+.privacy-note svg {
+    width: 14px;
+    height: 14px;
+}
+
+
+/* =====================================
+   DETECTION CARD
+===================================== */
+
+.live-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--green);
+    background: var(--green-light);
+    padding: 7px 10px;
+    border-radius: 30px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
+.live-badge span {
+    width: 6px;
+    height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+}
+
+
+/* =====================================
+   DETECTED SOUND
+===================================== */
+
+.detected-content {
+    margin-top: 32px;
+}
+
+.detected-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--secondary);
+}
+
+.detected-content h2 {
+    margin-top: 9px;
+    font-size: clamp(21px, 3vw, 28px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    overflow-wrap: anywhere;
+}
+
+.confidence-box {
+    margin-top: 20px;
+    padding: 14px;
+    background: #f7f8fc;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.confidence-box div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.confidence-box span {
+    color: var(--secondary);
+    font-size: 11px;
+}
+
+.confidence-box strong {
+    font-size: 12px;
+    color: var(--primary);
+}
+
+
+/* =====================================
+   DIVIDER
+===================================== */
+
+.divider {
+    height: 1px;
+    background: var(--border);
+    margin: 25px 0;
+}
+
+
+/* =====================================
+   PROBABILITY SECTION
+===================================== */
+
+.probability-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.probability-heading h4 {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.probability-heading span {
+    color: var(--secondary);
+    font-size: 10px;
+}
+
+.probability-item {
+    margin-bottom: 21px;
+}
+
+.probability-item:last-child {
+    margin-bottom: 0;
+}
+
+.probability-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.sound-name {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.probability-info > span {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
+
+.sound-icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.bell-icon {
+    background: #fff3df;
+    color: var(--orange);
+}
+
+.clap-icon {
+    background: #edf0ff;
+    color: var(--blue);
+}
+
+.noise-icon {
+    background: #f1edff;
+    color: var(--purple);
+}
+
+
+/* =====================================
+   PROGRESS BARS
+===================================== */
+
+.progress-track {
+    height: 8px;
+    width: 100%;
+    background: #f0f2f7;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    transition: width 0.25s ease;
+}
+
+.bell-fill {
+    background: var(--orange);
+}
+
+.clap-fill {
+    background: var(--blue);
+}
+
+.noise-fill {
+    background: var(--purple);
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 27px;
+    padding: 18px 0;
+    border-top: 1px solid var(--border);
+    color: var(--secondary);
+    font-size: 10px;
+}
+
+footer span {
+    margin: 0 5px;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 850px) {
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .listening-card {
+        min-height: auto;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    body {
+        padding: 20px 14px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+    }
+
+    .system-badge {
+        font-size: 0;
+        padding: 10px;
+    }
+
+    .system-badge .online-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .page-intro {
+        margin-top: 28px;
+    }
+
+    .page-intro h2 {
+        font-size: 26px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .mic-area {
+        padding: 35px 5px 25px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn-secondary {
+        width: 100%;
+    }
+
+    .confidence-box div {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .probability-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        line-height: 1.5;
+    }
+
+}
